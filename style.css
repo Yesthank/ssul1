@@ -1,1 +1,126 @@
+/* Custom Styling & Dark Mode Effects */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #111827; /* Dark gray/black fallback */
+}
+
+/* Character Card Styling */
+.character-card {
+    background-color: #1f2937;
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    border-bottom-width: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.character-card:hover {
+    transform: translateY(-2px);
+}
+
+.role-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-size: 0.6rem;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    max-width: 90%;
+    color: #e5e7eb; /* Light gray text */
+    background-color: #374151; /* Default dark bubble */
+}
+
+.chat-bubble.left {
+    background-color: #1e3a8a; /* Dark Blue */
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+}
+
+.chat-bubble.right {
+    background-color: #374151; /* Dark Gray */
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+    text-align: right;
+}
+
+/* Animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: none;
+}
+
+.shake-element {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+    color: #ff0055;
+    font-weight: bold;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+/* Stamp Animation */
+.stamp-animation {
+    animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes stampIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3) rotate(-15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(-12deg);
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111827; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280; 
+}
 
