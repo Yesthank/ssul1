@@ -1,6 +1,6 @@
 /* Custom Styling & Animations */
 
-/* Base reset improvements */
+/* Base reset */
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -14,24 +14,25 @@ body {
     line-height: 1.5;
     position: relative;
     max-width: 90%;
-    word-break: keep-all; /* Korean wrapping improvement */
+    word-break: keep-all; /* Korean word wrap fix */
 }
 
 .chat-bubble.left {
-    background-color: #ebf8ff; /* Light Blue - Default for others */
-    color: #2c5282;
+    background-color: #ebf8ff; /* Light Blue */
+    color: #1e3a8a;
     border-bottom-left-radius: 2px;
     margin-right: auto;
 }
 
 .chat-bubble.right {
-    /* Right bubbles usually maintain generic styling or specific overrides */
+    /* Right bubbles use utility classes in HTML */
     border-bottom-right-radius: 2px;
     margin-left: auto;
     text-align: right;
+    color: #374151;
 }
 
-/* Scroll Animation Setup */
+/* Animation Classes */
 .fade-in-section {
     opacity: 0;
     transform: translateY(30px);
@@ -44,7 +45,7 @@ body {
     transform: none;
 }
 
-/* Shake Animation (Used for suspicion/shouting) */
+/* Shake Animation (Emphasis) */
 .shake-element {
     animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
@@ -59,7 +60,7 @@ body {
     40%, 60% { transform: translate3d(4px, 0, 0); }
 }
 
-/* Stamp Animation (For Kwon Sang-woo's Alibi) */
+/* Stamp Animation (Evidence) */
 .stamp-animation {
     animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
@@ -75,28 +76,25 @@ body {
     }
 }
 
-/* Reveal Box Hover Effect */
+/* Reveal Box Hover */
 .reveal-box {
     transition: background-color 0.3s ease;
 }
 .reveal-box:hover {
-    background-color: #f0fff4; /* Light Green Tint */
+    background-color: #f0fff4; 
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
-
 ::-webkit-scrollbar-track {
     background: #f1f1f1; 
 }
-
 ::-webkit-scrollbar-thumb {
     background: #cbd5e0; 
     border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: #a0aec0; 
 }
