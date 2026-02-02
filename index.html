@@ -1,1 +1,247 @@
-1
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사건기록 17:00 : 접속자를 찾아라</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans KR"', 'sans-serif'],
+                    },
+                    colors: {
+                        noir: '#1a202c',
+                        neon: '#00ff9d',
+                        alert: '#ff0055',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans overflow-x-hidden selection:bg-neon selection:text-gray-900">
+
+    <header class="bg-black text-white py-8 shadow-lg sticky top-0 z-50 border-b-2 border-neon">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h1 class="text-3xl font-black mb-2 tracking-tighter text-neon glow-text">🕵️‍♂️ 사건기록 17:00</h1>
+            <p class="text-sm font-bold opacity-80 uppercase tracking-widest">Operation: Find the Imposter</p>
+        </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto px-4 py-8 space-y-12 pb-24">
+
+        <section class="grid grid-cols-4 gap-2 text-center mb-8 fade-in-section">
+            <div class="character-card border-blue-500">
+                <div class="text-2xl mb-1">📢</div>
+                <div class="font-bold text-xs">신영준</div>
+                <div class="role-badge bg-blue-900 text-blue-200">제보자</div>
+            </div>
+            <div class="character-card border-green-500">
+                <div class="text-2xl mb-1">🔍</div>
+                <div class="font-bold text-xs">김대욱</div>
+                <div class="role-badge bg-green-900 text-green-200">탐정</div>
+            </div>
+            <div class="character-card border-purple-500">
+                <div class="text-2xl mb-1">🛡️</div>
+                <div class="font-bold text-xs">정지훈</div>
+                <div class="role-badge bg-purple-900 text-purple-200">변호인</div>
+            </div>
+            <div class="character-card border-red-500">
+                <div class="text-2xl mb-1">❓</div>
+                <div class="font-bold text-xs">김종진</div>
+                <div class="role-badge bg-red-900 text-red-200">용의자</div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 rounded-2xl shadow-xl p-6 relative overflow-hidden fade-in-section border border-gray-700">
+            <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center text-blue-400">
+                <span class="bg-blue-900 bg-opacity-50 text-blue-300 text-xs px-2 py-1 rounded mr-2 border border-blue-500">Scene 1</span>
+                비보: 막힌 문
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble left border-l-4 border-blue-500">
+                    <strong class="text-blue-300">📢 신영준:</strong> 속보입니다. '그 사이트'가 막혔습니다. 접속 불가! 🚫
+                </div>
+                <div class="chat-bubble right border-r-4 border-green-500">
+                    <strong class="text-green-300">🔍 김대욱:</strong> ㅋㅋ 10을 11로 바꾸세요. 아마추어 같이 왜 이래?
+                </div>
+                <div class="chat-bubble right border-r-4 border-gray-500">
+                    <strong class="text-gray-400">🕶️ 서보광:</strong> 구글에 치면 다 나옴. 그리고 우리 공유 아이디 있잖아.
+                </div>
+                <p class="text-center text-xs text-gray-500 my-2">-- 평화로운 해결책이 제시되는 듯했다 --</p>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 rounded-2xl shadow-xl p-6 relative overflow-hidden fade-in-section border border-gray-700">
+            <div class="absolute top-0 left-0 w-1 h-full bg-alert"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center text-alert">
+                <span class="bg-red-900 bg-opacity-50 text-red-300 text-xs px-2 py-1 rounded mr-2 border border-red-500">Scene 2</span>
+                스모킹 건: 17시의 기록
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble left">
+                    <strong class="text-blue-300">📢 신영준:</strong> 근데 이거 로그인하면 언제 접속했는지 기록 뜨는데?
+                </div>
+                <div class="p-4 bg-black rounded-lg border border-neon text-neon font-mono text-sm shadow-[0_0_10px_rgba(0,255,157,0.3)]">
+                    <p>> SYSTEM: LOGIN HISTORY CHECK...</p>
+                    <p>> DETECTED: TODAY <span class="blink">17:00</span></p>
+                </div>
+                <div class="chat-bubble right shake-element">
+                    <strong class="text-green-300">🔍 김대욱:</strong> 17시?! 누구야!! 오늘 오후 5시에 들어간 놈!! 🚨
+                </div>
+                <div class="chat-bubble right">
+                    <strong class="text-gray-400">🕶️ 서보광:</strong> ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 와 미쳤네 대담하다
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 rounded-2xl shadow-xl p-6 relative overflow-hidden fade-in-section border border-gray-700">
+            <div class="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center text-purple-400">
+                <span class="bg-purple-900 bg-opacity-50 text-purple-300 text-xs px-2 py-1 rounded mr-2 border border-purple-500">Scene 3</span>
+                알리바이 게임
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble right border-r-4 border-purple-500">
+                    <strong class="text-purple-300">🛡️ 정지훈:</strong> 일단 진정해. 용의자를 추려보자.
+                </div>
+                <div class="chat-bubble right">
+                    <strong class="text-purple-300">🛡️ 정지훈:</strong> 나, 대욱, 보광, 현수는 17시에 같이 카페에 있었음. 알리바이 확실함.
+                </div>
+                <div class="chat-bubble right">
+                    <strong class="text-gray-400">🕶️ 서보광:</strong> ㅇㅇ 인정. 우린 아님. 우린 깨끗해.
+                </div>
+                <div class="chat-bubble left">
+                    <strong class="text-blue-300">📢 신영준:</strong> 난 아이디 있는 줄도 몰랐어. 나도 제외해줘.
+                </div>
+                <div class="p-4 bg-gray-900 rounded border border-gray-600">
+                    <h3 class="text-xs font-bold text-gray-400 mb-2 border-b border-gray-700 pb-1">📋 용의자 명단 (Suspect List)</h3>
+                    <ul class="text-sm space-y-1">
+                        <li class="line-through text-gray-600">김대욱 (카페)</li>
+                        <li class="line-through text-gray-600">서보광 (카페)</li>
+                        <li class="line-through text-gray-600">정지훈 (카페)</li>
+                        <li class="text-red-400 font-bold">김동하</li>
+                        <li class="text-red-400 font-bold">김종진</li>
+                        <li class="text-red-400 font-bold">권상우</li>
+                        <li class="text-red-400 font-bold">이창민</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 rounded-2xl shadow-xl p-6 relative overflow-hidden fade-in-section border border-gray-700">
+            <div class="absolute top-0 left-0 w-1 h-full bg-red-500"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center text-red-400">
+                <span class="bg-red-900 bg-opacity-50 text-red-300 text-xs px-2 py-1 rounded mr-2 border border-red-500">Scene 4</span>
+                범인은 이 안에 있다
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-500 text-sm italic text-center">그때, 아무것도 모르는 김종진이 등장한다.</p>
+                <div class="chat-bubble right border-r-4 border-red-500 bg-gray-700">
+                    <strong class="text-red-300">❓ 김종진:</strong> 얘들아 근데 'cumji'가 뭐야?
+                </div>
+                <div class="chat-bubble right shake-element text-xl">
+                    <strong class="text-green-300">🔍 김대욱:</strong> 잡았다 요놈!! 👮‍♂️
+                </div>
+                <div class="chat-bubble right">
+                    <strong class="text-green-300">🔍 김대욱:</strong> 종진이 너였냐? 아주 흥분했구만?!
+                </div>
+                
+                <div class="mt-8 p-6 bg-gray-900 rounded-xl border-2 border-dashed border-red-500 text-center relative reveal-box cursor-pointer hover:bg-black transition-colors" id="verdictBox">
+                    <p class="text-sm text-gray-400 mb-2">김종진의 최후 변론</p>
+                    <h3 class="text-xl font-bold text-white mb-1" id="verdictText">???</h3>
+                    <div class="text-5xl font-black text-red-600 -rotate-12 transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 stamp-reveal" id="imposterStamp">
+                        IMPOSTER
+                    </div>
+                    <p class="text-xs text-gray-600 mt-4">(박스를 클릭하여 판결 확인)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-black text-gray-400 rounded-2xl shadow-lg p-6 text-center fade-in-section border-t-4 border-neon">
+            <h2 class="text-lg font-bold text-neon mb-2">EPILOGUE</h2>
+            <p class="leading-relaxed text-sm">
+                사건은 종진의 부인으로 미궁에 빠지는 듯했으나,<br>
+                모두가 알고 있었다.<br>
+                <span class="text-white font-bold">"우리는 모두 공범이다."</span>
+            </p>
+            <div class="mt-6 text-4xl animate-bounce">🤐</div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 text-gray-600 text-xs">
+        <p>SECURITY LEVEL: TOP SECRET</p>
+        <p>© 2024 The Chatroom Detectives.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Scroll Animation
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // 2. Interactive Verdict Box
+            const verdictBox = document.getElementById('verdictBox');
+            const verdictText = document.getElementById('verdictText');
+            const imposterStamp = document.getElementById('imposterStamp');
+            
+            verdictBox.addEventListener('click', () => {
+                verdictText.innerText = '"저는 범인이 아닙니다!"';
+                imposterStamp.style.opacity = '1';
+                imposterStamp.classList.add('stamp-animation');
+                
+                // Add vibration effect to device if supported
+                if (navigator.vibrate) {
+                    navigator.vibrate(200);
+                }
+            });
+        });
+
+        // 3. Strict Security Logic
+        (function() {
+            const showAlert = () => {
+                alert("🚫 SYSTEM ALERT: Unauthorized Access Detected.\n(보안 프로토콜에 의해 접근이 차단되었습니다)");
+            };
+
+            // Disable Context Menu
+            document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+            // Disable Developer Keys
+            document.addEventListener('keydown', (e) => {
+                if (
+                    e.key === 'F12' || 
+                    e.key === 'F11' ||
+                    (e.ctrlKey && (e.key === 'u' || e.key === 'U')) ||
+                    (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J'))
+                ) {
+                    e.preventDefault();
+                    showAlert();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
