@@ -3,282 +3,276 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECT: CUMJI - 임포스터를 찾아라</title>
+    <title>임포스터를 찾아라 : 17시의 내부자들</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         sans: ['"Noto Sans KR"', 'sans-serif'],
-                        display: ['"Do Hyeon"', 'sans-serif'],
-                        impact: ['"Black Han Sans"', 'sans-serif'],
                     },
                     colors: {
-                        'among-red': '#C51111',
-                        'among-blue': '#132ED1',
-                        'among-gray': '#3F474E',
-                        'neon-green': '#39FF14',
-                    },
-                    animation: {
-                        'bounce-slow': 'bounce 3s infinite',
+                        emergency: '#C51111', /* Among Us Red */
+                        vent: '#712b8f',      /* Imposter Purple */
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-gray-900 text-gray-200 overflow-x-hidden selection:bg-among-red selection:text-white">
+<body class="bg-gray-100 text-gray-800 font-sans overflow-x-hidden">
 
-    <div id="intro-screen" class="fixed inset-0 z-50 bg-black flex flex-col items-center justify-center cursor-pointer transition-opacity duration-1000">
-        <div class="text-among-red font-impact text-6xl md:text-8xl tracking-widest animate-pulse mb-4 text-center">
-            EMERGENCY<br>MEETING
-        </div>
-        <p class="text-white font-mono text-sm blinking-cursor">> 터치하여 회의 시작</p>
-    </div>
-
-    <header class="sticky top-0 z-40 bg-gray-900/90 backdrop-blur-md border-b border-gray-700 py-4 shadow-lg">
-        <div class="max-w-2xl mx-auto px-4 flex justify-between items-center">
-            <h1 class="font-impact text-2xl text-white tracking-wider">
-                <span class="text-among-red">AMONG</span> USERS
-            </h1>
-            <div class="text-xs font-mono text-neon-green border border-neon-green px-2 py-1 rounded animate-pulse">
-                LIVE: 17:00 접속자 추적 중
-            </div>
+    <header class="bg-emergency text-white py-8 shadow-md sticky top-0 z-50">
+        <div class="max-w-2xl mx-auto px-4 text-center">
+            <h1 class="text-3xl font-black mb-2 tracking-tight">🚨 임포스터를 찾아라</h1>
+            <p class="text-sm font-bold opacity-80">AMONG US in Real Life : 17시의 진실</p>
         </div>
     </header>
 
-    <main class="max-w-2xl mx-auto px-4 pb-32 pt-8 space-y-16">
+    <main class="max-w-2xl mx-auto px-4 py-8 space-y-12 pb-24">
 
-        <section class="fade-in-section">
-            <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-yellow-500 shadow-lg relative overflow-hidden">
-                <div class="absolute top-2 right-2 text-6xl opacity-10">📢</div>
-                <h2 class="font-display text-2xl text-yellow-500 mb-4">SCENE 1. 사건의 발단</h2>
+        <section class="grid grid-cols-4 gap-2 text-center mb-8 fade-in-section">
+            <div class="bg-white p-2 rounded-xl shadow-sm border-b-4 border-blue-500">
+                <div class="text-2xl mb-1">📢</div>
+                <div class="font-bold text-xs">신영준</div>
+                <div class="text-[10px] text-gray-500">제보자</div>
+            </div>
+            <div class="bg-white p-2 rounded-xl shadow-sm border-b-4 border-green-600">
+                <div class="text-2xl mb-1">🧐</div>
+                <div class="font-bold text-xs">김대욱</div>
+                <div class="text-[10px] text-gray-500">수사반장</div>
+            </div>
+            <div class="bg-white p-2 rounded-xl shadow-sm border-b-4 border-gray-700">
+                <div class="text-2xl mb-1">💻</div>
+                <div class="font-bold text-xs">서보광</div>
+                <div class="text-[10px] text-gray-500">아이디 주인</div>
+            </div>
+            <div class="bg-white p-2 rounded-xl shadow-sm border-b-4 border-emergency">
+                <div class="text-2xl mb-1">👻</div>
+                <div class="font-bold text-xs">용의자들</div>
+                <div class="text-[10px] text-gray-500">종진/현수 등</div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden fade-in-section">
+            <div class="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-2">Scene 1</span>
+                사건의 발단: Cumji?
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble left">
+                    <strong>📢 신영준:</strong> 속보! avsee 막힘!
+                </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>🧐 김대욱:</strong> ㅋㅋ 10을 11로 바꾸세요.
+                </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>🍗 이창민:</strong> 저서... 좆프리카의 엠창치킨 아닙니까? (동문서답)
+                </div>
+                <div class="chat-bubble left border-2 border-yellow-400 bg-yellow-50">
+                    <strong>📢 신영준:</strong> "Cumji"가 뭔데 시발 ㅋㅋㅋㅋㅋㅋ 존나 웃기노!
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden fade-in-section">
+            <div class="absolute top-0 left-0 w-2 h-full bg-yellow-400"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded mr-2">Scene 2</span>
+                공유 아이디의 미스터리
+            </h2>
+            <div class="space-y-4">
+                <p class="text-gray-600 italic border-l-2 border-gray-300 pl-3">
+                    레벨 3... 누군가 무친듯이 시청하고 있다.
+                </p>
+                <div class="chat-bubble left">
+                    <strong>🛡️ 정지훈:</strong> 레벨... 누가 올리는 거고? 2렙 직전이었는데.
+                </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>💻 서보광:</strong> 난 처음부터 3렙이었음. 그 사이에 누가 많이 본 듯.
+                </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>💻 서보광:</strong> 지훈이가 만들어준 아이디... 요즘 참 잘 쓰고 있다 ^^
+                </div>
+                <div class="chat-bubble left shake-element">
+                    <strong>🛡️ 정지훈:</strong> (방어적) 누군가 몰래 보는 사람이 있다!!
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden fade-in-section">
+            <div class="absolute top-0 left-0 w-2 h-full bg-emergency"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded mr-2">Scene 3</span>
+                스모킹 건: 17시의 접속자
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble left">
+                    <strong>📢 신영준:</strong> 야! 이거 로그인할 때마다 포인트 내역 나오는데?
+                </div>
+                <div class="p-4 bg-gray-900 rounded-lg text-green-400 font-mono text-sm shadow-inner">
+                    > SYSTEM ALERT<br>
+                    > ACCESS TIME: <span class="text-red-500 font-bold bg-red-900 px-1">17:00</span><br>
+                    > POINT: +100 (Daily Check-in)
+                </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>🧐 김대욱:</strong> 휴대폰 센서 있어서 '분출'하면 포인트 오름 ㅋㅋㅋ
+                </div>
+                <div class="chat-bubble left font-bold text-red-600 border-2 border-red-100">
+                    <strong>📢 신영준:</strong> 17시... 니기야? 범인 색출 가능할지도!
+                </div>
                 
-                <div class="space-y-3">
-                    <div class="chat-bubble left">
-                        <span class="name">신영준</span>
-                        🚨 속보! avsee 막힘! 
-                    </div>
-                    <div class="chat-bubble right">
-                        <span class="name">김대욱</span>
-                        ㅋㅋ 10을 11로 바꾸세요. 아마추어임?
-                    </div>
-                    <div class="chat-bubble left">
-                        <span class="name">이창민</span>
-                        저서... 좆프리카의 엠창치킨 아닙니까?
-                    </div>
-                    <div class="w-full text-center my-4">
-                        <span class="inline-block bg-white text-black font-black text-xl px-4 py-2 transform -rotate-2 border-4 border-red-600 shadow-xl">
-                            "Cumji가 먼데 시발ㅋㅋ"
-                        </span>
-                    </div>
-                    <p class="text-center text-xs text-gray-500">※ 사건명: 쿰지(Cumji) 미스터리 발생</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="fade-in-section">
-            <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-among-red shadow-lg">
-                <h2 class="font-display text-2xl text-among-red mb-4">SCENE 2. 스모킹 건 (17시)</h2>
+                <hr class="border-gray-200 my-4">
                 
-                <div class="bg-black p-4 rounded border border-gray-600 font-mono text-sm text-green-500 mb-4 shadow-inner">
-                    > SYSTEM_LOG CHECK...<br>
-                    > USER_ID: SHARED_ACC_01<br>
-                    > LEVEL: 3 (UNEXPECTED LEVEL UP)<br>
-                    > <span class="text-red-500 font-bold bg-red-900/30 px-1">LAST LOGIN: TODAY 17:00</span>
+                <h3 class="text-sm font-bold text-gray-500 mb-2">알리바이 체크 (카페 그룹)</h3>
+                <div class="flex flex-wrap gap-2 mb-2">
+                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">✅ 김대욱</span>
+                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">✅ 정지훈</span>
+                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">✅ 서보광</span>
+                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">✅ 김현수</span>
                 </div>
-
-                <div class="space-y-3">
-                    <div class="chat-bubble left">
-                        <span class="name">신영준</span>
-                        야, 로그인할 때마다 포인트 100 주거든?<br>
-                        <span class="text-yellow-300">범인 색출 가능할지도.</span>
-                    </div>
-                    <div class="chat-bubble right">
-                        <span class="name">김대욱</span>
-                        휴대폰에 센서 있어서 분출하면 오르는 거 아님? ㅋㅋ
-                    </div>
-                    <div class="chat-bubble left">
-                        <span class="name">서보광</span>
-                        정액량 비례 포인트 적립 ㅋㅋㅋㅋ
-                    </div>
-                    <div class="chat-bubble right font-bold border-red-500 border">
-                        <span class="name">김대욱</span>
-                        잠만. 17시 누구야. 자수해라.
-                    </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>🧐 김대욱:</strong> 남은 건... 김동하, 종진, 상, 창! 누구야?!
                 </div>
             </div>
         </section>
 
-        <section class="fade-in-section">
-            <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-among-blue shadow-lg">
-                <h2 class="font-display text-2xl text-among-blue mb-4">SCENE 3. 알리바이 공방전</h2>
+        <section class="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden fade-in-section">
+            <div class="absolute top-0 left-0 w-2 h-full bg-green-500"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded mr-2">Scene 4</span>
+                권상우의 완벽한 알리바이
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble left bg-gray-800 text-white">
+                    <strong>🥊 권상우:</strong> 뭔데? 17시? 나 그때 엄마랑 산책.
+                </div>
                 
-                <div class="flex flex-wrap gap-2 mb-6">
-                    <span class="badge safe">김대욱 (카페)</span>
-                    <span class="badge safe">정지훈 (카페)</span>
-                    <span class="badge safe">서보광 (카페)</span>
-                    <span class="badge safe">김현수 (카페)</span>
-                    <span class="badge sus">김동하 (기타?)</span>
-                    <span class="badge sus">김종진 (자취방)</span>
-                    <span class="badge sus">권상우 (?)</span>
+                <div class="mt-4 p-6 bg-green-50 rounded-xl border-2 border-dashed border-green-300 text-center relative reveal-box cursor-pointer" id="evidenceBox">
+                    <div class="text-4xl mb-2">📸</div>
+                    <p class="text-sm text-gray-500 font-bold">증거 사진 제출</p>
+                    <p class="text-xs text-gray-400">(클릭하여 확인)</p>
+                    
+                    <div class="text-4xl font-black text-green-600 rotate-12 transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 stamp-reveal" id="safeStamp">
+                        확시(확실한시민)
+                    </div>
                 </div>
 
-                <div class="space-y-3">
-                    <div class="chat-bubble left bg-gray-700">
-                        <span class="name">김종진</span>
-                        저는 임포가 아닙니다. 진천 자취방에서 친구들이랑 있음.
-                    </div>
-                    <div class="chat-bubble right">
-                        <span class="name">서보광</span>
-                        자취방이면 말 다 했네. (의심)
-                    </div>
-                    <div class="chat-bubble left bg-gray-700">
-                        <span class="name">김동하</span>
-                        난 기타 학원임! 증인 있다!
-                    </div>
-                    <div class="chat-bubble right">
-                        <span class="name">김대욱</span>
-                        화장실 가서 쳤는지 우예 아노?
-                    </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>🧐 김대욱:</strong> ㅇㅈ! 상우 확시. ㅅㄱ.
+                </div>
+                <div class="chat-bubble right bg-gray-100 font-bold text-red-500">
+                    <strong>💻 서보광:</strong> 그럼 남은 건... 창종(창민/종진)이다.
                 </div>
             </div>
         </section>
 
-        <section class="fade-in-section">
-            <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-neon-green shadow-lg relative">
-                <div class="absolute -top-4 -right-4 bg-neon-green text-black font-black px-4 py-2 rotate-12 shadow-xl z-10 rounded-lg">
-                    확시(확실한 시민)
+        <section class="bg-white rounded-2xl shadow-lg p-6 relative overflow-hidden fade-in-section">
+            <div class="absolute top-0 left-0 w-2 h-full bg-vent"></div>
+            <h2 class="text-xl font-bold mb-4 flex items-center">
+                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-2">Scene 5</span>
+                벤트쇼: 옥딸의 전설
+            </h2>
+            <div class="space-y-4">
+                <div class="chat-bubble left">
+                    <strong>👻 김현수:</strong> 아 시팔 존나 웃기네 ㅋㅋ 나 아님!
                 </div>
-                <h2 class="font-display text-2xl text-neon-green mb-4">SCENE 4. 권상우의 무죄 증명</h2>
-
-                <div class="space-y-3">
-                    <div class="chat-bubble left">
-                        <span class="name">권상우</span>
-                        나 17시에 엄마랑 산책 중이었음.
-                    </div>
-                    <div class="border-2 border-dashed border-gray-500 rounded-lg p-8 text-center bg-gray-900/50">
-                        <span class="text-4xl block mb-2">📸</span>
-                        <span class="text-sm text-gray-400">[사진] 어머니와 평화로운 산책.jpg</span>
-                    </div>
-                    <div class="chat-bubble right">
-                        <span class="name">일동</span>
-                        ㅇㅈ! 상우 확시!
-                    </div>
-                    <div class="chat-bubble right text-red-400 font-bold">
-                        <span class="name">서보광</span>
-                        그럼 남은 건... 창민, 종진, 동하네? ^^
-                    </div>
+                <div class="chat-bubble right bg-gray-100 border-r-4 border-emergency">
+                    <strong>🥊 권상우:</strong> <span class="text-red-600 font-black">경크!!</span> 현수 야동 트는 거 봄. 화상채팅 하다 화장실 감. 벤트 탔음.
+                </div>
+                <div class="chat-bubble left">
+                    <strong>👻 김현수:</strong> 벤트가 뭐임?? 억울하다! 딸 안 친지 2주 넘음!
+                </div>
+                <div class="chat-bubble right bg-gray-100">
+                    <strong>🧐 김대욱:</strong> 2주? 그게 더 수상하다. <span class="font-bold text-purple-600">혼모텔딸? 옥딸?</span>
                 </div>
             </div>
         </section>
 
-        <section class="fade-in-section">
-            <div class="bg-gray-800 rounded-xl p-6 border-l-4 border-purple-500 shadow-lg">
-                <h2 class="font-display text-2xl text-purple-500 mb-4">SCENE 5. 벤트 의혹과 옥딸</h2>
-
-                <div class="space-y-3">
-                    <div class="chat-bubble left">
-                        <span class="name">김현수</span>
-                        시팔 카톡 존나 웃기네 ㅋㅋ 나 아님.
-                    </div>
-                    <div class="chat-bubble right bg-red-900/50 text-red-200 border border-red-500">
-                        <span class="name">권상우</span>
-                        <span class="font-black text-lg">📢 경크!!!</span><br>
-                        현수 아까 화상채팅 하다가 혼자 화장실 감. 벤트 탔음.
-                    </div>
-                    <div class="chat-bubble left">
-                        <span class="name">김현수</span>
-                        벤트가 뭐임?? 억울하다!! 딸 안 친 지 2주 넘음!
-                    </div>
-                    <div class="chat-bubble right">
-                        <span class="name">김대욱</span>
-                        2주? 그게 더 수상하다. <span class="text-yellow-400">혼모텔딸? 옥딸?</span>
-                    </div>
-                </div>
-            </div>
+        <section class="bg-gray-800 text-white rounded-2xl shadow-lg p-6 text-center fade-in-section">
+            <h2 class="text-lg font-bold text-gray-300 mb-2">EPILOGUE</h2>
+            <p class="leading-relaxed mb-4">
+                "야포스터는 누구야!!"<br><br>
+                진범은 끝내 밝혀지지 않았고<br>
+                그날 이후 모두가 <span class="text-emergency font-bold">서로를 의심하게 되었다.</span>
+            </p>
+            <div class="animate-bounce mt-4 text-3xl">🤫</div>
         </section>
 
     </main>
 
-    <footer class="fixed bottom-0 w-full bg-gray-900 border-t border-gray-700 p-4 z-40 pb-safe">
-        <div class="max-w-2xl mx-auto">
-            <p class="text-center text-gray-400 text-xs mb-2 uppercase tracking-widest">Who is the Imposter?</p>
-            <div class="grid grid-cols-2 gap-2">
-                <button onclick="vote('kim')" class="vote-btn bg-gray-700 hover:bg-among-red text-white py-3 rounded font-bold transition-colors">
-                    김종진 (자취방)
-                </button>
-                <button onclick="vote('lee')" class="vote-btn bg-gray-700 hover:bg-among-red text-white py-3 rounded font-bold transition-colors">
-                    김현수 (옥딸?)
-                </button>
-            </div>
-        </div>
+    <footer class="text-center py-6 text-gray-400 text-xs">
+        <p>© 2024 Among Friends. All sus reserved.</p>
     </footer>
 
-    <div id="eject-screen" class="fixed inset-0 z-[60] bg-black hidden flex flex-col items-center justify-center pointer-events-none">
-        <div class="star-field absolute inset-0"></div>
-        <div id="eject-text" class="text-white font-display text-2xl md:text-4xl text-center relative z-10 px-4 leading-relaxed">
-            </div>
-        <button onclick="location.reload()" class="mt-8 px-6 py-2 border border-white text-white rounded hover:bg-white hover:text-black transition pointer-events-auto relative z-10">
-            다시 회의하기
-        </button>
-    </div>
-
     <script>
-        // Intro Click
-        document.getElementById('intro-screen').addEventListener('click', function() {
-            this.style.opacity = '0';
-            setTimeout(() => {
-                this.style.display = 'none';
-            }, 1000);
+        // 1. Scroll & Stamp Animation Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Evidence Box Click Event
+            const evidenceBox = document.getElementById('evidenceBox');
+            const safeStamp = document.getElementById('safeStamp');
+            
+            if(evidenceBox && safeStamp) {
+                evidenceBox.addEventListener('click', () => {
+                    safeStamp.style.opacity = '1';
+                    safeStamp.classList.add('stamp-animation');
+                    // Simple haptic feedback if available
+                    if(navigator.vibrate) navigator.vibrate(50);
+                });
+            }
         });
 
-        // Scroll Animation
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
-
-        // Voting Logic
-        function vote(suspect) {
-            const screen = document.getElementById('eject-screen');
-            const text = document.getElementById('eject-text');
-            screen.style.display = 'flex'; // Show screen
-            screen.classList.remove('hidden');
-            
-            let message = "";
-            if(suspect === 'kim') {
-                message = "김종진은 임포스터가 아니었습니다.<br><span class='text-sm text-gray-400'>(임포스터는 1명 남았습니다)</span>";
-            } else {
-                message = "김현수는 억울해 보였습니다.<br><span class='text-sm text-gray-400'>(진범은 웃고 있다...)</span>";
-            }
-
-            // Simple animation sequence simulation
-            text.innerHTML = "......";
-            text.classList.add('eject-animation');
-            
-            setTimeout(() => {
-                text.innerHTML = message;
-            }, 2000);
-        }
-
-        // Security Logic (Strict)
+        // 2. Security Logic (Strict)
         (function() {
-            const block = (e) => { 
-                e.preventDefault(); 
-                alert('🚫 ACCESS DENIED: 보안 프로토콜 작동 중.'); 
+            const showAlert = () => {
+                alert("⚠️ EMERGENCY: 보안 프로토콜 위반 감지.\n(관리자 외 접근 불가)");
             };
-            document.addEventListener('contextmenu', block);
+
+            // Disable Right Click
+            document.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+            });
+
+            // Disable Key Combinations
             document.addEventListener('keydown', (e) => {
-                if(e.key == 'F12' || e.key == 'F11' || (e.ctrlKey && (e.key === 'u' || e.key === 'U'))) block(e);
+                if (e.key === 'F12' || e.key === 'F11') {
+                    e.preventDefault();
+                    showAlert();
+                    return;
+                }
+                if (e.ctrlKey && (e.key === 'u' || e.key === 'U')) {
+                    e.preventDefault();
+                    showAlert();
+                    return;
+                }
+                if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) {
+                    e.preventDefault();
+                    showAlert();
+                    return;
+                }
             });
         })();
     </script>
