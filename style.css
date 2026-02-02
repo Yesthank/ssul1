@@ -1,73 +1,42 @@
-/* Among Us & Noir Theme Styles */
+/* Custom Styling & Animations */
 
-/* Base Reset */
+/* Base reset improvements */
 body {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Chat Bubbles */
+/* Chat Bubble Styling */
 .chat-bubble {
-    padding: 10px 14px;
+    padding: 12px 16px;
     border-radius: 12px;
     font-size: 0.95rem;
     line-height: 1.5;
     position: relative;
-    max-width: 85%;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-bubble .name {
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin-bottom: 2px;
-    opacity: 0.8;
+    max-width: 90%;
+    word-break: keep-all; /* Korean wrapping improvement */
 }
 
 .chat-bubble.left {
-    background-color: #2D3748; /* Dark Gray */
-    color: #E2E8F0;
-    margin-right: auto;
+    background-color: #ebf8ff; /* Light Blue - Default for others */
+    color: #2c5282;
     border-bottom-left-radius: 2px;
+    margin-right: auto;
 }
 
 .chat-bubble.right {
-    background-color: #1a56db; /* Among Blueish */
-    color: white;
-    margin-left: auto;
+    /* Right bubbles usually maintain generic styling or specific overrides */
     border-bottom-right-radius: 2px;
+    margin-left: auto;
     text-align: right;
 }
 
-.chat-bubble.right .name {
-    text-align: right;
-}
-
-/* Badges */
-.badge {
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: bold;
-}
-
-.badge.safe {
-    background-color: rgba(57, 255, 20, 0.1);
-    color: #39FF14;
-    border: 1px solid #39FF14;
-}
-
-.badge.sus {
-    background-color: rgba(197, 17, 17, 0.1);
-    color: #ff4d4d;
-    border: 1px solid #ff4d4d;
-}
-
-/* Animations */
+/* Scroll Animation Setup */
 .fade-in-section {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, visibility;
 }
 
 .fade-in-section.visible {
@@ -75,53 +44,59 @@ body {
     transform: none;
 }
 
-.blinking-cursor {
-    animation: blink 1s step-end infinite;
+/* Shake Animation (Used for suspicion/shouting) */
+.shake-element {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
-@keyframes blink {
-    50% { opacity: 0; }
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
 }
 
-.eject-animation {
-    animation: floatAway 5s linear forwards;
+/* Stamp Animation (For Kwon Sang-woo's Alibi) */
+.stamp-animation {
+    animation: stampIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
-@keyframes floatAway {
-    0% { transform: translateX(-50%) rotate(0deg) scale(0.5); opacity: 0; }
-    20% { opacity: 1; transform: translateX(0) rotate(10deg) scale(1); }
-    100% { transform: translateX(50%) rotate(45deg) scale(0.8); }
+@keyframes stampIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(3) rotate(-15deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1) rotate(12deg);
+    }
 }
 
-/* Star Field for Ejection Screen */
-.star-field {
-    background-image: 
-        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 3px),
-        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 2px),
-        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 3px);
-    background-size: 550px 550px, 350px 350px, 250px 250px;
-    background-position: 0 0, 40px 60px, 130px 270px;
-    animation: starMove 100s linear infinite;
+/* Reveal Box Hover Effect */
+.reveal-box {
+    transition: background-color 0.3s ease;
+}
+.reveal-box:hover {
+    background-color: #f0fff4; /* Light Green Tint */
 }
 
-@keyframes starMove {
-    from { background-position: 0 0, 40px 60px, 130px 270px; }
-    to { background-position: -550px -550px, -310px -290px, -120px 20px; }
-}
-
-/* Utilities */
-.pb-safe {
-    padding-bottom: env(safe-area-inset-bottom);
-}
-
-/* Scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 8px;
 }
+
 ::-webkit-scrollbar-track {
-    background: #1a202c; 
+    background: #f1f1f1; 
 }
+
 ::-webkit-scrollbar-thumb {
-    background: #4a5568; 
-    border-radius: 3px;
+    background: #cbd5e0; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0; 
 }
